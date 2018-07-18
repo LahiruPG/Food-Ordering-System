@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="722.0" prefWidth="1289.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.ViewOrderFormController">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/vieworderform.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="331.0" layoutY="596.0" prefHeight="75.0" prefWidth="273.0" />
+      <Pane fx:id="mainPain" layoutX="22.0" layoutY="35.0" prefHeight="480.0" prefWidth="1246.0">
+         <children>
+            <Pane fx:id="paneMain" prefHeight="480.0" prefWidth="1246.0" style="-fx-background-color: white;" styleClass="Box" stylesheets="@../style/vieworderform.css">
+               <children>
+                  <TableView fx:id="tblOrders" layoutX="13.0" layoutY="41.0" prefHeight="427.0" prefWidth="758.0">
+                    <columns>
+                      <TableColumn fx:id="clmCustomerName" editable="false" prefWidth="176.0" sortable="false" text="Customer Name" />
+                      <TableColumn fx:id="clmTelephoneNumber" editable="false" prefWidth="157.0" sortable="false" text="Telephone Number" />
+                        <TableColumn fx:id="clmDeliveryTime" prefWidth="224.0" text="DeliveryTime" />
+                        <TableColumn fx:id="clmTOP" editable="false" prefWidth="200.0" sortable="false" text="TOP" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tblOrderDetails" layoutX="785.0" layoutY="41.0" prefHeight="369.0" prefWidth="445.0">
+                    <columns>
+                      <TableColumn fx:id="clmDescription" prefWidth="289.0" text="Description" />
+                      <TableColumn fx:id="clmQty" prefWidth="155.0" text="QTY" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="txtTotalQty" alignment="CENTER" editable="false" layoutX="1138.0" layoutY="430.0" prefHeight="31.0" prefWidth="90.0" promptText="Total QTY" />
+                  <Label layoutX="1055.0" layoutY="435.0" text="Tatal QTY" />
+               </children>
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Pane>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="-20.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Order">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="784.0" layoutY="-20.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Order Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="800.0" direction="RIGHT" layoutX="552.0" layoutY="1.0" prefHeight="716.0" prefWidth="738.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Pane fx:id="paneDrawer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="tblGetOrder" layoutX="7.0" layoutY="10.0" prefHeight="353.0" prefWidth="721.0">
+                     <columns>
+                        <TableColumn fx:id="clmGetOrderDescription" prefWidth="543.0" text="Description" />
+                        <TableColumn fx:id="clmTakeOrderQty" prefWidth="177.0" text="QTY" />
+                     </columns>
+                  </TableView>
+                  <VBox layoutX="197.0" layoutY="422.0" prefHeight="172.0" prefWidth="345.0" spacing="30.0">
+                     <children>
+                        <JFXTextField fx:id="txtCustomerName" labelFloat="true" promptText="Customer Name" />
+                        <JFXTextField fx:id="txtTelephoneNumber" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Telephone Number" />
+                        <JFXTextField fx:id="txtDeliveryTime" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Delivery Time" />
+                     </children>
+                  </VBox>
+                  <JFXButton fx:id="btnFinishOrder" layoutX="25.0" layoutY="629.0" onAction="#btnFinishOrderAction" prefHeight="59.0" prefWidth="187.0" stylesheets="@../style/vieworderform.css" text="Finish Order">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="txtTotalQty1" alignment="CENTER" editable="false" layoutX="633.0" layoutY="371.0" prefHeight="31.0" prefWidth="90.0" promptText="Total QTY" />
+                  <Label layoutX="553.0" layoutY="377.0" text="Tatal QTY" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+      </JFXDrawer>
+      <JFXButton fx:id="btnTakeOrder" accessibleText="TAKE_ORDER" layoutX="272.0" layoutY="557.0" onAction="#btnTakeOrderAction" prefHeight="70.0" prefWidth="329.0" stylesheets="@../style/vieworderform.css" text="Take Order">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="buttons" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane fx:id="pnePrint" layoutX="490.0" layoutY="220.0" prefHeight="446.0" prefWidth="566.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <VBox fx:id="vboxPrint" layoutX="233.0" layoutY="43.0" prefHeight="446.0" prefWidth="566.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="lblOid" text="Oid" />
+                  <Label fx:id="lblCustomerName" text="CusName" />
+                  <Label fx:id="lblTelephoneNo" text="TP" />
+                  <Label fx:id="lblAddress" text="Addre" />
+                  <Label fx:id="lblAmount" text="Amount" />
+               </children>
+               <padding>
+                  <Insets left="50.0" top="50.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtTotalAmount" layoutX="37.0" layoutY="565.0" visible="false" />
+   </children>
+</AnchorPane>

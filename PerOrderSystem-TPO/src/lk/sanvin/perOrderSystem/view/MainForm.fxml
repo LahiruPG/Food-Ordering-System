@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="814.0" prefWidth="2078.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.MainFormController">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/mainform.css" />
+    </stylesheets>
+   <children>
+      <StackPane fx:id="rootPane" layoutX="78.0" layoutY="67.0" prefHeight="814.0" prefWidth="1311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="637.0" prefWidth="1008.0">
+               <children>
+                  <Pane prefHeight="113.0" prefWidth="1700.0" style="-fx-background-color: #32a4d1;" styleClass="Box" stylesheets="@../style/mainform.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="113.0" fitWidth="1160.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Banner.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow height="40.43" radius="9.6075" width="0.0" />
+                     </effect>
+                  </Pane>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" layoutY="113.0" prefHeight="705.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="113.0">
+                     <children>
+                        <VBox fx:id="vbox" prefHeight="705.0" prefWidth="242.0" spacing="10.0" style="-fx-background-color: white;" stylesheets="@../style/mainform.css">
+                           <children>
+                              <JFXButton fx:id="btnPlaseOrder" contentDisplay="TOP" layoutX="20.0" layoutY="198.0" onAction="#btnPlaseOrderAction" prefHeight="87.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Place Order">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="EDIT" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnCheckOrder" contentDisplay="TOP" onAction="#btnCheckOrderAction" prefHeight="96.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Check Order">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LEANPUB" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnLogOut" contentDisplay="TOP" layoutX="20.0" layoutY="117.0" onAction="#btnLogOutAction" prefHeight="96.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Log Out">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnExit" contentDisplay="TOP" layoutX="20.0" layoutY="294.0" onAction="#btnExitAction" prefHeight="81.0" prefWidth="222.0" ripplerFill="RED" styleClass="btnExit" stylesheets="@../style/mainform.css" text="Exit">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="POWER_OFF" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow height="0.0" radius="4.75" />
+                           </effect>
+                        </VBox>
+                     </children>
+                  </JFXDrawer>
+                  <BorderPane fx:id="borderPane" layoutX="254.0" layoutY="123.0" prefHeight="658.0" prefWidth="1442.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="123.0" />
+                  <Pane layoutX="1353.0" layoutY="9.0" prefHeight="96.0" prefWidth="335.0" styleClass="Box" stylesheets="@../style/mainform.css" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="9.0">
+                     <children>
+                        <Pane opacity="0.38" prefHeight="96.0" prefWidth="335.0" style="-fx-background-color: white;">
+                           <effect>
+                              <BoxBlur />
+                           </effect>
+                        </Pane>
+                        <JFXButton contentDisplay="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="66.0" prefWidth="70.0" text=" ">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="USER" size="50" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="txtUserName1" editable="false" layoutX="90.0" layoutY="3.0" prefHeight="29.0" prefWidth="240.0" promptText="UserName" unFocusColor="#797979">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtUserNic1" editable="false" layoutX="90.0" layoutY="44.0" prefHeight="29.0" prefWidth="240.0" promptText="NIC" unFocusColor="#797979">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+                  <AnchorPane prefHeight="22.0" prefWidth="1719.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="0.0">
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" radius="4.75" width="0.0" />
+                     </effect>
+                     <children>
+                        <Label fx:id="lblDate" layoutX="1481.0" layoutY="2.0" prefHeight="21.0" prefWidth="120.0" text="Date" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="110.0">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CALENDAR" size="15" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblTime" layoutX="1612.0" layoutY="1.0" prefHeight="21.0" prefWidth="92.0" text="time" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="7.0">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOCK_ALT" size="15" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="pneLogin" layoutX="760.0" layoutY="210.0" prefHeight="529.0" prefWidth="478.0" style="-fx-background-color: White;" styleClass="Box" stylesheets="@../style/mainform.css">
+         <children>
+            <JFXTextField fx:id="txtLoginNic" focusColor="#039be5" labelFloat="true" layoutX="103.0" layoutY="209.0" onAction="#txtLoginNicAction" onMouseClicked="#txtLoginNicMouseClick" prefHeight="29.0" prefWidth="295.0" promptText="NIC" />
+            <JFXPasswordField fx:id="txtLoginPassword" focusColor="#039be5" labelFloat="true" layoutX="103.0" layoutY="304.0" onAction="#txtLoginPasswordAction" prefHeight="29.0" prefWidth="295.0" promptText="Psddword" />
+            <JFXButton fx:id="btbLogin" layoutX="55.0" layoutY="432.0" onAction="#btbLoginAction" prefHeight="52.0" prefWidth="157.0" styleClass="buttons" stylesheets="@../style/mainform.css" text="Log IN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLoginExit" layoutX="282.0" layoutY="432.0" onAction="#btnLoginExitAction" prefHeight="52.0" prefWidth="157.0" styleClass="buttonExit" stylesheets="@../style/mainform.css" text="Exit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="66.0" prefWidth="448.0" style="-fx-background-color: #039be5;" styleClass="Box" stylesheets="@../style/mainform.css" text="Login Form" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInvalidPasswordOrNic" alignment="CENTER" layoutX="22.0" layoutY="142.0" prefHeight="21.0" prefWidth="436.0" style="-fx-background-color: red;" text="Invalid NIC or  Password" textFill="WHITE" visible="false" />
+            <Label alignment="CENTER" layoutX="107.0" layoutY="77.0" prefHeight="35.0" prefWidth="258.0" text="Telephone Operator Application" textFill="#039be5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

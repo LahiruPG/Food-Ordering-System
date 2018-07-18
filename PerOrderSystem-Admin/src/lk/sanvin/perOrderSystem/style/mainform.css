@@ -1,0 +1,43 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btn:hover{
+        -fx-background-color:#619cff;
+         -fx-text-fill: white;
+       
+}
+.btnExit:hover{
+        -fx-background-color:#ff5454;
+         -fx-text-fill: white;
+       /* -fx-scale-y: 1.1; */
+}
+.glyph-icon{
+    -fx-fill: black;
+}
+.Box{
+    /*-fx-background-color: white;*/
+    /*-fx-border-radius: 10 10 10 10;*/
+    -fx-background-radius: 5 5 5 5;
+}
+
+.buttons{
+    -fx-background-color: #039be5;
+    -fx-text-fill: white;
+    
+}
+.btnExit:hover .glyph-icon{
+        -fx-fill: white;
+}
+
+.btn:hover .glyph-icon{
+         -fx-fill: white;
+}
+.buttonExit{
+    -fx-background-color: #ff5454;
+    -fx-text-fill: white;
+    
+}

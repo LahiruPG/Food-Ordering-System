@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="769.0" prefWidth="1279.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.PlaseOrderFormController">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/plaseorderform.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="62.0" layoutY="91.0" prefHeight="573.0" prefWidth="372.0" spacing="40.0" styleClass="Box" stylesheets="@../style/plaseorderform.css" AnchorPane.topAnchor="91.0">
+         <children>
+            <JFXTextField fx:id="txtCustomerName" labelFloat="true" promptText="Customer Name" />
+            <JFXTextField fx:id="txtTelephoneNumber" labelFloat="true" promptText="Telephone Number" />
+            <JFXTextArea fx:id="txtAddress" labelFloat="true" prefHeight="123.0" prefWidth="342.0" promptText="Address" wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="60.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#bfbaba" height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </VBox>
+      <Label alignment="CENTER" layoutX="75.0" layoutY="67.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/plaseorderform.css" text="Customer Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="451.0" layoutY="91.0" prefHeight="573.0" prefWidth="610.0" styleClass="Box" stylesheets="@../style/plaseorderform.css" AnchorPane.leftAnchor="451.0" AnchorPane.topAnchor="91.0">
+         <children>
+            <TableView fx:id="tblItem" layoutX="13.0" layoutY="211.0" prefHeight="288.0" prefWidth="585.0">
+              <columns>
+                <TableColumn fx:id="clmDescription" prefWidth="219.0" text="Decription" />
+                  <TableColumn fx:id="clmQty" prefWidth="124.0" text="QTY" />
+                  <TableColumn fx:id="clmUnitPrice" prefWidth="101.0" text="Unit Price" />
+                  <TableColumn fx:id="clmAmount" minWidth="0.0" prefWidth="140.0" text="Amount" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnAddToList" layoutX="471.0" layoutY="143.0" onAction="#btnAddToListAction" prefHeight="42.0" prefWidth="129.0" styleClass="btn" stylesheets="@../style/plaseorderform.css" text="Add to List">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <JFXTextField fx:id="txtDate" editable="false" labelFloat="true" layoutX="493.0" layoutY="22.0" prefHeight="29.0" prefWidth="108.0" promptText="Order Date" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="22.0" />
+            <JFXButton fx:id="btnRemoveItem" layoutX="24.0" layoutY="511.0" onAction="#btnRemoveItemAction" prefHeight="42.0" prefWidth="129.0" styleClass="btnExit" stylesheets="@../style/plaseorderform.css" text="Remove Item">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <TextField fx:id="txtTotalAmount" alignment="CENTER" editable="false" layoutX="490.0" layoutY="517.0" prefHeight="31.0" prefWidth="108.0" promptText="Total Amount" />
+            <Label layoutX="372.0" layoutY="522.0" text="Total Amount">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="18.0" layoutY="144.0" prefHeight="48.0" prefWidth="437.0" style="-fx-background-color: #f1f7ff;" styleClass="pane" stylesheets="@../style/plaseorderform.css">
+               <children>
+                  <JFXTextField fx:id="txtQty" layoutX="331.0" layoutY="6.0" prefHeight="29.0" prefWidth="89.0" promptText="QTY" />
+                  <JFXComboBox fx:id="comBoxDescription" layoutX="21.0" layoutY="5.0" onAction="#comBoxDescriptionAction" prefHeight="31.0" prefWidth="280.0" promptText="Decription" />
+               </children>
+            </Pane>
+            <Pane layoutX="19.0" layoutY="63.0" prefHeight="48.0" prefWidth="437.0" style="-fx-background-color: #f1f7ff;" styleClass="pane" stylesheets="@../style/plaseorderform.css">
+               <children>
+                  <Label layoutX="23.0" layoutY="11.0" text="Delivery time" />
+                  <JFXDatePicker fx:id="datePiker" defaultColor="#009ada" layoutX="153.0" layoutY="7.0" prefHeight="29.0" prefWidth="118.0" promptText="Date" />
+                  <JFXTimePicker fx:id="timePiker" defaultColor="#009ada" layoutX="312.0" layoutY="8.0" prefHeight="29.0" prefWidth="98.0" promptText="Time" />
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow color="#bfbaba" height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="463.0" layoutY="67.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/plaseorderform.css" text="Order Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <VBox layoutX="1079.0" layoutY="91.0" prefHeight="157.0" prefWidth="179.0" spacing="10.0" styleClass="Box" stylesheets="@../style/plaseorderform.css">
+         <children>
+            <JFXButton fx:id="btnSaveOrder" onAction="#btnSaveOrderAction" prefHeight="64.0" prefWidth="260.0" ripplerFill="#0062ff" styleClass="btn" stylesheets="@../style/plaseorderform.css" text="Save Order">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnCancleOrder" onAction="#btnCancleOrderAction" prefHeight="64.0" prefWidth="304.0" ripplerFill="RED" styleClass="btnExit" stylesheets="@../style/plaseorderform.css" text="Cancel Order">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="#bfbaba" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <TextField fx:id="txtTime" disable="true" editable="false" layoutX="1011.0" layoutY="14.0" visible="false" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

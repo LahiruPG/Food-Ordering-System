@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="818.0" prefWidth="1907.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.MainFormController">
+   <stylesheets>
+      <URL value="@/lk/sanvin/perOrderSystem/style/mainform.css" />
+   </stylesheets>
+   <children>
+      <StackPane fx:id="rootPane" layoutX="78.0" layoutY="67.0" prefHeight="818.0" prefWidth="1512.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="637.0" prefWidth="1008.0">
+               <children>
+                  <Pane prefHeight="113.0" prefWidth="1313.0" style="-fx-background-color: #32a4d1;" styleClass="Box" stylesheets="@../style/mainform.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="113.0" fitWidth="1160.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Banner.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow height="40.43" radius="9.6075" width="0.0" />
+                     </effect>
+                  </Pane>
+                  <BorderPane fx:id="borderPane" layoutX="254.0" layoutY="123.0" prefHeight="688.0" prefWidth="1649.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="123.0" />
+                  <JFXDrawer fx:id="dwrMainButtons" defaultDrawerSize="300.0" layoutY="113.0" prefHeight="707.0" prefWidth="242.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.topAnchor="113.0">
+                     <children>
+                        <VBox fx:id="vboxMainButtons" prefHeight="702.0" prefWidth="242.0" spacing="10.0" style="-fx-background-color: white;" stylesheets="@../style/mainform.css">
+                           <children>
+                              <JFXButton fx:id="btnDashboard" contentDisplay="TOP" layoutX="20.0" layoutY="198.0" onAction="#btnDashboardAction" prefHeight="87.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Dashbord">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="AREA_CHART" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnProcess" contentDisplay="TOP" layoutX="20.0" layoutY="20.0" onAction="#btnProcessAction" prefHeight="87.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Current Process">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="TV" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnOrders" contentDisplay="TOP" layoutX="20.0" layoutY="117.0" onAction="#btnOrdersAction" prefHeight="87.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Orders">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="INBOX" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnManageEmployees" contentDisplay="TOP" onAction="#btnManageEmployeesAction" prefHeight="96.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Manage Employees">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="USERS" size="40" wrappingWidth="39.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnManageItems" contentDisplay="TOP" layoutX="20.0" layoutY="117.0" onAction="#btnManageItemsAction" prefHeight="96.0" prefWidth="222.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Manage Items">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="LIST_ALT" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnExit" contentDisplay="TOP" layoutX="20.0" layoutY="294.0" onAction="#btnExitAction" prefHeight="81.0" prefWidth="222.0" ripplerFill="RED" styleClass="btnExit" stylesheets="@../style/mainform.css" text="Exit">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="POWER_OFF" size="40" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow height="0.0" radius="4.75" />
+                           </effect>
+                        </VBox>
+                     </children>
+                  </JFXDrawer>
+                  <JFXDrawer fx:id="dweManageEmployees" defaultDrawerSize="300.0" direction="RIGHT" layoutX="1685.0" layoutY="113.0" prefHeight="707.0" prefWidth="222.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="113.0">
+                     <children>
+                        <VBox fx:id="vboxManageEmployees" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="62.0" prefWidth="256.0" text="Employees" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="USERS" size="30" wrappingWidth="35.0" />
+                                 </graphic>
+                              </Label>
+                              <JFXButton fx:id="btnAdmin" contentDisplay="TOP" layoutX="10.0" layoutY="194.0" onAction="#btnAdminAction" prefHeight="49.0" prefWidth="297.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Admin">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="USER_SECRET" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnTelophoneOperators" contentDisplay="TOP" onAction="#btnTelophoneOperatorsAction" prefHeight="49.0" prefWidth="325.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Telophone Operators">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="FAX" size="20" />
+                                 </graphic></JFXButton>
+                              <JFXButton fx:id="btnCooks" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#btnCooksAction" prefHeight="49.0" prefWidth="287.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Cooks">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="USER" size="20" />
+                                 </graphic></JFXButton>
+                              <JFXButton fx:id="btnCAshier" contentDisplay="TOP" layoutX="10.0" layoutY="250.0" onAction="#btnCAshierAction" prefHeight="49.0" prefWidth="297.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Cashiers">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="MONEY" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnDilivers" contentDisplay="TOP" layoutX="10.0" layoutY="59.0" onAction="#btnDiliversAction" prefHeight="49.0" prefWidth="297.0" styleClass="btn" stylesheets="@../style/mainform.css" text="Delivers">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="TRUCK" size="20" />
+                                 </graphic></JFXButton>
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children></JFXDrawer>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="pneLogin" layoutX="790.0" layoutY="220.0" prefHeight="529.0" prefWidth="478.0" style="-fx-background-color: White;" styleClass="Box" stylesheets="@../../../../../../PerOrderSystem-CA/src/lk/sanvin/perOrderSystem/style/mainform.css">
+         <children>
+            <JFXTextField fx:id="txtLoginNic" focusColor="#039be5" labelFloat="true" layoutX="103.0" layoutY="209.0" onAction="#txtLoginNicAction" onMouseClicked="#txtLoginNicMouseClick" prefHeight="29.0" prefWidth="295.0" promptText="NIC" />
+            <JFXPasswordField fx:id="txtLoginPassword" focusColor="#039be5" labelFloat="true" layoutX="103.0" layoutY="304.0" onAction="#txtLoginPasswordAction" prefHeight="29.0" prefWidth="295.0" promptText="Psddword" />
+            <JFXButton fx:id="btbLogin" layoutX="48.0" layoutY="432.0" onAction="#btbLoginAction" prefHeight="52.0" prefWidth="157.0" styleClass="buttons" stylesheets="@../../../../../../PerOrderSystem-CA/src/lk/sanvin/perOrderSystem/style/mainform.css" text="Log IN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLoginExit" layoutX="282.0" layoutY="432.0" onAction="#btnLoginExitAction" prefHeight="52.0" prefWidth="157.0" styleClass="buttonExit" stylesheets="@../../../../../../PerOrderSystem-CA/src/lk/sanvin/perOrderSystem/style/mainform.css" text="Exit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="66.0" prefWidth="448.0" style="-fx-background-color: #039be5;" styleClass="Box" stylesheets="@../../../../../../PerOrderSystem-CA/src/lk/sanvin/perOrderSystem/style/mainform.css" text="Login Form" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInvalidPasswordOrNic" alignment="CENTER" layoutX="22.0" layoutY="142.0" prefHeight="21.0" prefWidth="436.0" style="-fx-background-color: red;" text="Invalid NIC or  Password" textFill="WHITE" visible="false" />
+            <Label alignment="CENTER" layoutX="125.0" layoutY="80.0" prefHeight="35.0" prefWidth="220.0" text="Admin Application" textFill="#039be5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Pane layoutX="1560.0" layoutY="12.0" prefHeight="96.0" prefWidth="335.0" styleClass="Box" stylesheets="@../style/mainform.css" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+         <children>
+            <Pane opacity="0.68" prefHeight="96.0" prefWidth="335.0" style="-fx-background-color: white;">
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </Pane>
+            <JFXButton contentDisplay="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="66.0" prefWidth="70.0" text=" ">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="txtUserName" editable="false" layoutX="90.0" layoutY="2.0" prefHeight="29.0" prefWidth="240.0" promptText="UserName" unFocusColor="#797979">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUserNic" editable="false" layoutX="90.0" layoutY="44.0" prefHeight="29.0" prefWidth="240.0" promptText="NIC" unFocusColor="#797979">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

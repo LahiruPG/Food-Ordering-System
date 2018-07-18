@@ -1,0 +1,44 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.Box{
+    -fx-background-color: white;
+    /*-fx-border-radius: 10 10 10 10;*/
+    -fx-background-radius: 5 5 5 5;
+}
+.label1{
+   -fx-background-color: #009ada;
+    /*-fx-border-radius: 10 10 10 10;*/
+    -fx-background-radius: 5 5 5 5; 
+    -fx-text-fill: white;
+    
+}
+
+.buttons{
+   /* -fx-background-color: #b2d3ff;*/
+   -fx-background-color:#619cff;
+    -fx-text-fill: black;
+     -fx-background-radius: 20 20 20 20; 
+    
+}
+.btnExit:hover {
+        -fx-background-color:#ff5454;
+         -fx-text-fill: white;
+       /* -fx-scale-y: 1.1; */
+}
+
+.btn:hover {
+        -fx-background-color:#619cff;
+         -fx-text-fill: white;
+       /* -fx-scale-y: 1.1; */
+        -fx-background-radius: 5 5 5 5; 
+        
+}
+.pane {
+        -fx-background-color:#619cff;
+        -fx-background-radius: 50 50 50 50;
+}

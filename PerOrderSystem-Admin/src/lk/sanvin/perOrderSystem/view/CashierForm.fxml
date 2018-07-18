@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="742.0" prefWidth="1389.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.CashierFormController">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/cookform.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="742.0" prefWidth="1389.0" styleClass="mainFxmlClass" stylesheets="@../style/tpoform.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="12.0" layoutY="31.0" prefHeight="692.0" prefWidth="372.0" spacing="30.0" styleClass="Box" stylesheets="@../style/tpoform.css">
+               <children>
+                  <JFXTextField fx:id="txtName" focusColor="#039be5" labelFloat="true" promptText="Name" />
+                  <VBox prefHeight="32.0" prefWidth="276.0">
+                     <children>
+                        <Label text="Gender" textFill="#726b6b">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="-20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="19.0" prefWidth="248.0" spacing="50.0">
+                           <children>
+                              <JFXRadioButton fx:id="rdbMale" onAction="#rdbMaleAction" text="Male">
+                                 <HBox.margin>
+                                    <Insets left="-10.0" />
+                                 </HBox.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="rdbFemale" onAction="#rdbFemaleAction" text="Female">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXRadioButton>
+                           </children>
+                        </HBox>
+                        <Line endX="100.0" startX="440.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <JFXTextField fx:id="txtNic" focusColor="#039be5" labelFloat="true" onKeyReleased="#txtNicKeyReleasdAction" promptText="NIC No.                            Ex. (123456789V)" />
+                  <JFXTextField fx:id="txtDob" focusColor="#039be5" labelFloat="true" onKeyReleased="#txtDobKeyReleasedAction" promptText="DOB                                 Ex. (1995-01-02)" />
+                  <JFXTextField fx:id="txtContact" focusColor="#039be5" labelFloat="true" onKeyReleased="#txtContactKeyReleasedAction" promptText="Contact No                      Ex.(077-1234567)" />
+                  <JFXTextArea fx:id="txtAddress" focusColor="#039be5" labelFloat="true" prefHeight="123.0" prefWidth="342.0" promptText="Address" wrapText="true" />
+                  <JFXTextField fx:id="txtPassword" focusColor="#039be5" labelFloat="true" promptText="Password" />
+                  <HBox spacing="15.0">
+                     <children>
+                        <JFXButton fx:id="btnAdd" buttonType="RAISED" onAction="#btnAddAction" prefHeight="45.0" prefWidth="103.0" ripplerFill="WHITE" styleClass="buttons" stylesheets="@../style/tpoform.css" text="Add" />
+                        <JFXButton fx:id="btnUpdate" buttonType="RAISED" onAction="#btnUpdateAction" prefHeight="45.0" prefWidth="103.0" ripplerFill="WHITE" styleClass="buttons" stylesheets="@../style/tpoform.css" text="Update" />
+                        <JFXButton fx:id="btnSDelete" buttonType="RAISED" onAction="#btnSDeleteAction" prefHeight="45.0" prefWidth="103.0" ripplerFill="WHITE" styleClass="buttons" stylesheets="@../style/tpoform.css" text="Delete" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnClear" buttonType="RAISED" onAction="#btnClearAction" prefHeight="45.0" prefWidth="342.0" styleClass="buttons" stylesheets="@../style/tpoform.css" text="Clear">
+                     <VBox.margin>
+                        <Insets top="-15.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="60.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#bfbaba" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </VBox>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="7.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/tpoform.css" text="Cashier Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblCashier" layoutX="396.0" layoutY="85.0" prefHeight="637.0" prefWidth="987.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="396.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="85.0">
+               <columns>
+                  <TableColumn fx:id="clmName" editable="false" prefWidth="176.0" text="Name" />
+                  <TableColumn fx:id="clmGender" editable="false" prefWidth="87.0" text="Gender" />
+                  <TableColumn fx:id="clmNIC" editable="false" prefWidth="132.0" text="NIC No" />
+                  <TableColumn fx:id="clmDob" editable="false" prefWidth="85.0" text="DOB" />
+                  <TableColumn fx:id="clmContactNo" editable="false" prefWidth="204.0" text="Contact No" />
+                  <TableColumn fx:id="clmPassword" editable="false" minWidth="0.0" prefWidth="141.0" text="Password" />
+                  <TableColumn fx:id="clmAddress" editable="false" minWidth="0.0" prefWidth="161.0" text="Address" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="txtName1" labelFloat="true" layoutX="396.0" layoutY="30.0" prefHeight="38.0" prefWidth="268.0" promptText="Serch" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

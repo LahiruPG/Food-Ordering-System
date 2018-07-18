@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="853.0" prefWidth="1666.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.ViewOrderForm2Controller">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/vieworderform.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="740.0" prefWidth="1590.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-322.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="39.0" prefHeight="132.0" prefWidth="313.0" style="-fx-background-color: white;" styleClass="Box" stylesheets="@../style/vieworderform.css">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <children>
+                  <JFXTextField fx:id="txtSerch" labelFloat="true" layoutX="21.0" layoutY="87.0" prefHeight="31.0" prefWidth="242.0" promptText="Serch oid/CustomerName/Address" />
+                  <JFXDatePicker fx:id="datePiker" defaultColor="#009ada" layoutX="21.0" layoutY="37.0" onAction="#datePikerAction" prefHeight="29.0" prefWidth="118.0" promptText="Toay" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="377.0" layoutY="38.0" prefHeight="91.0" prefWidth="619.0" styleClass="Box" stylesheets="@../style/vieworderform.css" visible="false">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <children>
+                  <JFXComboBox fx:id="combSetDeliver" labelFloat="true" layoutX="25.0" layoutY="42.0" onAction="#combSetDeliveraAction" prefHeight="31.0" prefWidth="194.0" promptText="Set Deliver" />
+                  <JFXTextField fx:id="txtDeliverTelephoneNumber" editable="false" labelFloat="true" layoutX="250.0" layoutY="43.0" promptText="Telephone Number" />
+                  <JFXTextField fx:id="txtDeliverNIC" editable="false" labelFloat="true" layoutX="435.0" layoutY="43.0" promptText="NIC" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1052.0" layoutY="39.0" prefHeight="159.0" prefWidth="385.0" styleClass="Box" stylesheets="@../style/vieworderform.css" visible="false">
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <children>
+                  <JFXButton fx:id="btnSave" layoutX="47.0" layoutY="28.0" onAction="#btnSaveAction" prefHeight="48.0" prefWidth="147.0" stylesheets="@../style/vieworderform.css" text="Deliver Order">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCancleAction" layoutX="45.0" layoutY="86.0" onAction="#btnCancleActionAction" prefHeight="48.0" prefWidth="213.0" stylesheets="@../style/vieworderform.css" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnExit" />
+                        <String fx:value="ExitButtons" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFinishOrder" layoutX="203.0" layoutY="28.0" onAction="#btnFinishOrderAction" prefHeight="48.0" prefWidth="147.0" stylesheets="@../style/vieworderform.css" text="Finish Order">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFaildOrder" layoutX="268.0" layoutY="85.0" onAction="#btnFaildOrderAction" prefHeight="48.0" prefWidth="78.0" stylesheets="@../style/vieworderform.css" text="Faild">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnExit" />
+                        <String fx:value="buttons" />
+                        <String fx:value="ExitButtons" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="377.0" layoutY="152.0" prefHeight="67.0" prefWidth="619.0" styleClass="Box" stylesheets="@../style/vieworderform.css" visible="false">
+               <children>
+                  <JFXTextField fx:id="txtOid" editable="false" labelFloat="true" layoutX="144.0" layoutY="19.0" prefHeight="29.0" prefWidth="63.0" promptText="OiID" unFocusColor="#0077ff" />
+                  <JFXTextField fx:id="txtCustomerName" editable="false" labelFloat="true" layoutX="236.0" layoutY="19.0" promptText="Customer Name" unFocusColor="#0077ff" />
+                  <JFXTextField fx:id="txtCustomerTelephoneNo" editable="false" labelFloat="true" layoutX="435.0" layoutY="19.0" promptText="Customer Telephone No" unFocusColor="#0077ff" />
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </AnchorPane>
+            <TextField fx:id="txtTime" editable="false" layoutX="1387.0" layoutY="14.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="8.0" layoutY="232.0" prefHeight="614.0" prefWidth="1642.0" style="-fx-background-color: white;" styleClass="Box" stylesheets="@../style/vieworderform.css">
+         <children>
+            <TableView fx:id="tblOrders" layoutX="7.0" layoutY="32.0" prefHeight="576.0" prefWidth="1252.0">
+               <columns>
+                  <TableColumn fx:id="clmOid" editable="false" prefWidth="44.0" text="OID" />
+                  <TableColumn fx:id="clmCustomerName" editable="false" prefWidth="162.99996948242188" text="Customer Name" />
+                  <TableColumn fx:id="clmTelephoneNumber" editable="false" prefWidth="122.0" text="Telephone No" />
+                  <TableColumn fx:id="clmAddress" editable="false" prefWidth="143.0" text="Address" />
+                  <TableColumn fx:id="clmDeliveryTime" editable="false" prefWidth="171.0" text="DeliveryTime" />
+                  <TableColumn fx:id="clmTOP" editable="false" prefWidth="125.0" text="TOP" />
+                  <TableColumn fx:id="clmCook" editable="false" prefWidth="130.0" text="Cook" />
+                  <TableColumn fx:id="clmCashier" editable="false" prefWidth="123.0" text="Cashier" />
+                  <TableColumn fx:id="clmDeliver" editable="false" prefWidth="115.0" text="Deliver" />
+                  <TableColumn fx:id="clmStatus" editable="false" prefWidth="173.0" text="Status" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tblOrderDetails" layoutX="1264.0" layoutY="31.0" prefHeight="479.0" prefWidth="373.0">
+               <columns>
+                  <TableColumn fx:id="clmDescription" editable="false" prefWidth="159.0" text="Description" />
+                  <TableColumn fx:id="clmQty" editable="false" prefWidth="46.0" text="QTY" />
+                  <TableColumn fx:id="clmUnitPrice" editable="false" prefWidth="85.0" text="UnitPrice" />
+                  <TableColumn fx:id="ckmAmount" editable="false" text="Amount" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtTotalQty" alignment="CENTER" editable="false" layoutX="1341.0" layoutY="520.0" prefHeight="31.0" prefWidth="78.0" promptText="Total QTY" />
+            <Label layoutX="1270.0" layoutY="525.0" text="Tatal QTY" />
+            <TextField fx:id="txtTotalAmount" alignment="CENTER" editable="false" layoutX="1527.0" layoutY="520.0" prefHeight="31.0" prefWidth="108.0" promptText="Total Amount" />
+            <Label layoutX="1430.0" layoutY="525.0" text="Tatal Amount" />
+         </children>
+         <effect>
+            <DropShadow height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </Pane>
+      <Label alignment="CENTER" layoutX="32.0" layoutY="210.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Order Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1280.0" layoutY="210.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Item Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="10.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Filter Orders">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="391.0" layoutY="10.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Set Deiver" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1066.0" layoutY="10.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Actions" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="341.0" layoutY="160.0" opacity="0.9" prefHeight="48.0" prefWidth="159.0" styleClass="label1" stylesheets="@../style/vieworderform.css" text="Selected Order" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

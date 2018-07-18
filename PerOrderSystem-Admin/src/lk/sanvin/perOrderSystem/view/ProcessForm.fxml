@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="872.0" prefWidth="1652.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.ProcessFormController">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/processform.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="5.0" layoutY="35.0" prefHeight="560.0" prefWidth="1642.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblOrders" layoutX="7.0" layoutY="26.0" prefHeight="516.0" prefWidth="1225.0">
+               <columns>
+                  <TableColumn fx:id="clmOid" editable="false" prefWidth="44.0" text="OID" />
+                  <TableColumn fx:id="clmCustomerName" editable="false" prefWidth="147.0" text="Customer Name" />
+                  <TableColumn fx:id="clmTelephoneNumber" editable="false" prefWidth="124.0" text="Telephone No" />
+                  <TableColumn fx:id="clmAddress" editable="false" prefWidth="121.0" text="Address" />
+                  <TableColumn fx:id="clmDeliveryTime" editable="false" prefWidth="165.0" text="DeliveryTime" />
+                  <TableColumn fx:id="clmTOP" editable="false" prefWidth="131.0" text="TOP" />
+                  <TableColumn fx:id="clmCook" editable="false" prefWidth="135.0" text="Cook" />
+                  <TableColumn fx:id="clmCashier" editable="false" prefWidth="126.0" text="Cashier" />
+                  <TableColumn fx:id="clmDeliver" editable="false" prefWidth="105.0" text="Deliver" />
+                  <TableColumn fx:id="clmStatus" editable="false" prefWidth="192.0" text="Status" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tblOrderDetails" layoutX="1238.0" layoutY="26.0" prefHeight="460.0" prefWidth="397.0">
+               <columns>
+                  <TableColumn fx:id="clmDescription" editable="false" prefWidth="193.0" text="Description" />
+                  <TableColumn fx:id="clmQty" editable="false" prefWidth="47.0" text="QTY" />
+                  <TableColumn fx:id="clmUnitPrice" editable="false" prefWidth="75.0" text="UnitPrice" />
+                  <TableColumn fx:id="ckmAmount" editable="false" prefWidth="77.0" text="Amount" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtTotalQty" alignment="CENTER" editable="false" layoutX="1329.0" layoutY="500.0" prefHeight="31.0" prefWidth="90.0" promptText="Total QTY" />
+            <Label layoutX="1245.0" layoutY="505.0" text="Tatal QTY" />
+            <TextField fx:id="txtTotalAmount" alignment="CENTER" editable="false" layoutX="1529.0" layoutY="500.0" prefHeight="31.0" prefWidth="101.0" promptText="Total Amount" />
+            <Label layoutX="1429.0" layoutY="505.0" text="Tatal Amount" />
+         </children>
+         <effect>
+            <DropShadow height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </Pane>
+      <Pane layoutX="1104.0" layoutY="633.0" prefHeight="225.0" prefWidth="536.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblCashier" layoutX="27.0" layoutY="38.0" prefHeight="167.0" prefWidth="490.0">
+               <columns>
+                  <TableColumn fx:id="clmCashierName" editable="false" prefWidth="193.0" text="Name" />
+                  <TableColumn fx:id="clmCashierTelephoneNo" editable="false" prefWidth="126.0" text="Telephone No" />
+                  <TableColumn fx:id="clmCashierNic" editable="false" prefWidth="166.0" text="NIC" />
+               </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </Pane>
+      <Label alignment="CENTER" layoutX="1111.0" layoutY="611.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/tpoform.css" text="Cashier Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="7.0" layoutY="632.0" prefHeight="225.0" prefWidth="536.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblTpo" layoutX="27.0" layoutY="38.0" prefHeight="167.0" prefWidth="490.0">
+               <columns>
+                  <TableColumn fx:id="clmTpoName" editable="false" prefWidth="193.0" text="Name" />
+                  <TableColumn fx:id="clmTpoTelepnoneNo" editable="false" prefWidth="126.0" text="Telephone No" />
+                  <TableColumn fx:id="clmTpoNic" editable="false" prefWidth="166.0" text="NIC" />
+               </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </Pane>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="608.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/tpoform.css" text="Telephone Operator Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="554.0" layoutY="633.0" prefHeight="225.0" prefWidth="536.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblCook" layoutX="27.0" layoutY="38.0" prefHeight="167.0" prefWidth="490.0">
+               <columns>
+                  <TableColumn fx:id="clmCookName" editable="false" prefWidth="193.0" text="Name" />
+                  <TableColumn fx:id="clmCookTelephoneNo" editable="false" prefWidth="126.0" text="Telephone No" />
+                  <TableColumn fx:id="clmCookNic" editable="false" prefWidth="166.0" text="NIC" />
+               </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow height="15.0" radius="7.0" width="15.0" />
+         </effect>
+      </Pane>
+      <Label alignment="CENTER" layoutX="561.0" layoutY="609.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/tpoform.css" text="Cook Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="24.0" layoutY="4.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/tpoform.css" text="Order Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1204.0" layoutY="4.0" opacity="0.9" prefHeight="48.0" prefWidth="268.0" styleClass="label1" stylesheets="@../style/tpoform.css" text="Item Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

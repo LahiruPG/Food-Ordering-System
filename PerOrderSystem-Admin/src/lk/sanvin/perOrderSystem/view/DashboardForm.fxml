@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedAreaChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="823.0" prefWidth="1465.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.sanvin.perOrderSystem.controller.DashboardFormController">
+    <stylesheets>
+        <URL value="@/lk/sanvin/perOrderSystem/style/dashboardform.css" />
+    </stylesheets>
+   <children>
+      <StackedAreaChart fx:id="chart" layoutX="25.0" layoutY="179.0" prefHeight="508.0" prefWidth="1273.0" title="Sample Chart" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="179.0">
+        <xAxis>
+          <NumberAxis label="X line" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Y line" side="LEFT" />
+        </yAxis>
+      </StackedAreaChart>
+      <JFXButton fx:id="btnUp" layoutX="991.0" layoutY="696.0" onAction="#btnUpAction" prefHeight="73.0" prefWidth="148.0" text="up" />
+      <AnchorPane layoutX="25.0" layoutY="26.0" opacity="0.88" prefHeight="97.0" prefWidth="194.0" styleClass="label1" stylesheets="@../style/tpoform.css">
+         <children>
+            <Label layoutX="8.0" layoutY="10.0" text="Telephone Operators" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="148.0" layoutY="37.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
